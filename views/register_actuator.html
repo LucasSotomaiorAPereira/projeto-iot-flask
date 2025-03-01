@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="vertical-center">
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <div class="card-body">
+                    <form action= "http://localhost:8080/add_actuator" method= "POST">
+                        <p>Atuador:</p>
+                        <p><input type = "text" name = "actuator" placeholder="Actuator" id="inputs" required/></p>
+                        <p>Tópico:</p>
+                        <p><input type = "text" name = "topic" placeholder="Topico" id="inputs" required/></p>
+                        <div>
+                            <input type="checkbox" id="is_active" name="is_active" checked />
+                            <label for="is_active">Ativo?</label>
+                        </div>
+                        <p><input type = "submit" value = "Cadastrar" id="botaoAdicionar" /></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

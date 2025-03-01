@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block title %}
+<meta charset="UTF-8">
+<title>Modulo IOT</title>
+{% endblock %}
+{%block links%}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap4.min.css">
+<link rel="stylesheet" href="static/css/style.css" />
+{%endblock%}
+
+{% block content %}
+<div class="sobre">
+    <h1 class="titulo">Monitor de Qualidade do Ar</h1>
+    <div class="grid_esquerda">
+        <div class="texto">
+            <p>
+                O projeto consiste em um dispositivo IOT que gerencia a qualidade do ar em ambientes que precisam de um
+                cuidado maior, como fábricas, hospitais, ambientes de trabalho ou residenciais. O dispositivo é equipado
+                com sensores que coletam dados sobre os níveis de CO2 e PM2.5, e quando essas dados ultrapassam o limite
+                definido, são ativados os motores e reles para arejar o local. Esse monitoramento é essencial para
+                garantir um ambiente saudável e seguro. Os dados são transmitidos via MQTT e renderizados na aplicação
+                Web, para facilitar o monitoramento.
+            </p>
+        </div>
+        <div class="imagem">
+            <img src="../static/img/wokwi.png">
+        </div>
+    </div>
+    <div class="grid_direita">
+        <div class="imagem">
+            <img src="../static/img/imgallsemfundo.png">
+        </div>
+        <div class="texto">
+            <p>
+                A coleta e transmissão dos dados é realizada por um microcontrolador ESP32. Além disso, o sistema inclui
+                reles e motores, que são responsáveis por ajustar as condições ambientais conforme necessário. Os
+                ventiladores são ativados pelos reles para melhorar a circulação de ar, enquanto os motores podem abrir
+                ou fechar janelas automaticamente para regular a ventilação natural. Esses atuadores podem ser
+                controlados remotamente através da aplicação web, proporcionando um controle centralizado e eficiente do
+                ambiente, embora sejam acionados automaticamente em uma situação crítica.
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}

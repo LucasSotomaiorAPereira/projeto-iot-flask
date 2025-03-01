@@ -1,0 +1,30 @@
+{% extends"base.html" %}
+{% block content%} 
+<div class="vertical-center">
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <div class="card-body">
+                    <form action = "http://localhost:8080/update_sensor" method = "post">
+                        <p>Id:</p>
+                        <p><input type = "text" name = "id" value="{{sensor.id}}" readonly/></p>
+                        <p>Nome:</p>
+                        <p><input type = "text" name = "name" value="{{sensor.name}}" required/></p>
+                        <p>Tópico:</p>
+                        <p><input type = "text" name = "topic" value='{{sensor.topic}}' required/></p>
+                        <div>
+                            {% if sensor.is_active == true %}
+                                <input type="checkbox" id="is_active" name="is_active" checked />
+                            {% else %}
+                                <input type="checkbox" id="is_active" name="is_active" />
+                            {% endif %}    
+                            <label for="is_active">Ativo?</label>
+                        </div>
+                        <p><input type = "submit" value = "Alterar" /></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock%}

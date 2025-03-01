@@ -1,0 +1,122 @@
+html,
+body {
+    margin: 0;
+    height: 100%;
+    overflow: auto;
+}
+
+.container .forms {
+    margin-top: 50px;
+    padding-top: 50px;
+    border-color: black;
+}
+
+.container .view {
+    margin-top: 50px;
+    padding-top: 50px;
+}
+
+.view tr {
+    height: 20px;
+}
+
+.vertical-center {
+    min-height: 90%;
+    /* Fallback for browsers do NOT support vh unit */
+
+    /* min-height: 100vh; These two lines are counted as one :-)       */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vertical-center img {
+    position: relative;
+    max-width: 100%;
+}
+
+.form-check,
+.form-label {
+    padding-top: 10px;
+}
+
+#inputs:focus {
+    outline: 0px solid black;
+}
+
+#botao {
+    width: 100%;
+}
+
+#botaoAdicionar {
+    width: 189px;
+}
+
+#espacamentoLateral {
+    margin-left: 150px;
+}
+
+#espacamentoTopo {
+    margin-top: 150px;
+}
+
+#espacamentoLogin {
+    height: 100vh;
+}
+
+.adm_container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.sobre{
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    text-justify: inter-word;
+    display: grid;
+    grid-template-rows: 10% 45% 45%;
+    justify-content: center;
+    margin: 50px 50px 50px 50px
+}
+
+.grid_esquerda{
+    display: grid;
+    grid-template-columns: 65% 35%;
+}
+    
+.grid_direita{
+    display: grid;
+    grid-template-columns: 35% 65%;
+}
+
+.imagem{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.sobre img {
+    max-width: 100%;
+    max-height: 100%;
+    min-width: 40%;
+    min-height: 40%;
+}
+
+.texto{
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    align-content: center;
+    padding: 50px;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.titulo {
+    color: #333;
+    text-align: center;
+}
